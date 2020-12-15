@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <h3>Currently owned stocks:</h3>
+    <table>
+        <th>
+            Name
+        </th>
+        <th>
+            Symbol
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Average Cost
+        </th>
+        <th>
+            Total Cost
+        </th>
+        <th>
+            Current Value
+        </th>
+        <th>
+            Total Value
+        </th>
+        {% for stock in stocks %}
+        <tr class='table-body'>
+            <td>{{ stock['name'] }}</td>
+            <td>{{ stock['symbol'] }}</td>
+            <td>{{ stock['quantity'] }}</td>
+            <td>{{ stock['averageCost'] }}</td>
+            <td>{{ stock['initCost'] }}</td>
+            <td>{{ stock['currentPrice'] }}</td>
+            <td>{{ stock['totalValue'] }}</td>
+        </tr>
+        {% endfor %}
+        <tr class='table-body'>
+            <td>Cash</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{ cash[0]['cash'] }}</td>
+        </tr>
+        <tr class='table-footer'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>{{ total }}</b></td>
+        </tr>
+    </table>
+{% endblock %}

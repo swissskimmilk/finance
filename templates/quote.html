@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    {% if submitted %}
+    A share of {{name}} costs {{price}} ({{symbol}})
+    {% else %}
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input name="symbol" placeholder="Symbol" type="text" class="custom-input">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    {% endif %}
+{% endblock %}

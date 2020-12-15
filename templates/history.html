@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h3>Transaction History:</h3>
+    <table>
+        <th>
+            Date/Time
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Symbol
+        </th>
+        <th>
+            Transaction Type
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Price Per
+        </th>
+        <th>
+            Total
+        </th>
+        {% for transaction in transactions %}
+        <tr class='table-body'>
+            <td>{{ transaction['datetime'] }}</td>
+            <td>{{ transaction['name'] }}</td>
+            <td>{{ transaction['symbol'] }}</td>
+            {% if transaction['bought'] == 1 %}
+            <td>Bought</td>
+            {% else %}
+            <td>Sold</td>
+            {% endif %}
+            <td>{{ transaction['quantity'] }}</td>
+            <td>{{ transaction['pricePer'] }}</td>
+            <td>{{ transaction['total'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

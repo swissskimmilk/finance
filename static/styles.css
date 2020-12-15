@@ -1,0 +1,132 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+
+    color: #e4e6eb;
+    border: 2px solid #242526;
+    background-color: #242526;
+}
+
+main .form-control:focus
+{
+    color: #e4e6eb;
+    background-color: #3a3b3c;
+}
+
+.navbar-custom
+{
+    background-color: #242526;
+}
+
+.nav-link
+{
+    color: #e4e5e6;
+}
+
+.nav-link:hover
+{
+    color: #b0b3b8;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+body
+{
+    background-color: #18191a;
+    color: #e4e6eb;
+}
+
+.custom-input
+{
+    color: #e4e6eb;
+    border: 2px solid #242526;
+    background-color: #242526;
+}
+
+.custom-input:focus
+{
+    border: 2px solid #3a3b3c;
+    background-color: #3a3b3c;
+}
+
+select
+{
+    padding: 2px;
+    color: #e4e6eb;
+    border: 2px solid #242526;
+    background-color: #242526;
+}
+
+select:focus
+{
+    border: 2px solid #3a3b3c;
+    background-color: #3a3b3c;
+}
+
+table
+{
+    max-width: 100%;
+}
+
+th
+{
+    width: 200px;
+    padding: 3px;
+    text-align: left;
+    border-top: 2px solid #3a3b3c;
+    border-bottom: 2px solid #3a3b3c;
+}
+
+tr:hover {background-color:#3a3b3c;}
+.table-body
+{
+    color: #b0b3b8;
+    text-align: left;
+    border-top: 1px solid #3a3b3c;
+    border-bottom: 1px solid #3a3b3c;
+}
+
+.table-footer
+{
+    color: #b0b3b8;
+    text-align: left;
+}
+
+td
+{
+    padding: 3px;
+}
+
